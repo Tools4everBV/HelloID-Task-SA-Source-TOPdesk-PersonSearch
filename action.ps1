@@ -8,8 +8,9 @@ try {
     $base64 = [System.Convert]::ToBase64String($bytes)
     $key = "Basic $base64"
     $headers = @{
-        "authorization" = $Key
-        "Accept"        = "application/json"
+        "authorization"       = $Key
+        "Accept"              = "application/json"
+        "Partner-Solution-Id" = "TOOL001"
     }
     
     if ([String]::IsNullOrEmpty($searchValue) -eq $true) {
